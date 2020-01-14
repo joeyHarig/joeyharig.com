@@ -1,0 +1,57 @@
+
+.mouse-animation_container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 60%;
+
+    .animation-item {
+        border-style: solid;
+        border-color: white;
+    }
+
+    .animation-mouse {
+        display: flex;
+        justify-content: center;
+        width: 24px;
+        height: 40px;
+        border-width: 2px;
+        margin-bottom: 16px;
+        border-radius: 16px; 
+
+        div {
+            margin-top: 8px;
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            margin-bottom: 16px;
+            border-radius: 16px;
+        }
+    }
+
+    .animation-arrow {
+        height: 12px;
+        width: 12px;
+        opacity: 0%;
+        border-style: solid;
+        border-width: 0px 2px 2px 0px;
+        margin-bottom: 8px;
+        transform: rotate(45deg);
+        animation: mouse_fade 4s infinite;
+    }
+
+    #arrow2 { animation-delay: 0.5s; }
+    #arrow3 { animation-delay: 1s; }
+}
+  
+@keyframes mouse_fade {
+    0%   { opacity: 0; }
+    50% { opacity: 1; }
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+}
