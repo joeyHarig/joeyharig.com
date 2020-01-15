@@ -1,7 +1,8 @@
 import React from 'react';
+import Data from './data.json';
 import { 
   Route,
-  Redirect,
+  //Redirect,
   BrowserRouter as Router
  } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/" component={ LandingPage } />
+        <Route path="/" component={ LandingPage } data={ Data } />
       </Router>
     </div>
   );

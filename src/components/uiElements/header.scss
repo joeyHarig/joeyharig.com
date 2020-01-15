@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+header {
+    position: relative;
+    width: 100vw;
+    background-color: $color-grey-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $margin-large 0px;
+    text-transform: uppercase;
+    h1 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    h2 {
+        color: $color-grey-medium;
+        font-size: 2rem;
+        font-weight: 200;
+        margin-top: $margin-small;
+    }
+}

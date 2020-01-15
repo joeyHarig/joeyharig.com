@@ -3,7 +3,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10vh;
+    top: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,7 @@
         opacity: 0%;
         border-style: solid;
         border-width: 0px 2px 2px 0px;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
         transform: rotate(45deg);
         animation: mouse_fade 4s infinite;
     }
@@ -50,7 +50,9 @@
 }
   
 @keyframes mouse_fade {
-    0%   { opacity: 0; }
+    0%   { 
+        opacity: 0;
+    }
     50% { opacity: 1; }
     90% { opacity: 0; }
     100% { opacity: 0; }

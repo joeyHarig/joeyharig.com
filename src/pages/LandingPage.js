@@ -4,11 +4,11 @@ import React from 'react';
 import Home from '../components/sections/Home';
 import Projects from '../components/sections/Projects';
 
-const LandingPage = () => {
+const LandingPage = props => {
     return (
         <div>
             <Home />
-            <Projects />
+            <Projects data = { props.data }/>
         </div>
     );
 };

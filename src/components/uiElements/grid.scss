@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+.grid {
+    margin: $margin-extra-large 0px;
+    display: grid;
+    max-width: 1212px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: ($margin-large * 2);
+}

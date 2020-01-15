@@ -8,10 +8,9 @@ const Icon = props => {
         let pathTags =[];
         for (let i = 0; i <= Icons[icon].length; i++) {
             pathTags.push(
-                <path d={Icons[icon][i]}></path>
+                <path key={ i } d={Icons[icon][i]}></path>
             );
         }
-        console.log(pathTags);
         return pathTags;
     };
 

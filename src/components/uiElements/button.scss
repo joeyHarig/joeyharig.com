@@ -1,17 +1,18 @@
+@import '../../variables.scss';
+
 button {
     cursor: pointer;
-    transition-duration: 0.1s;
-    padding: 8px 12px 6px 12px;
+    transition-duration: 0.2s;
+    padding: 8px 12px;
     font-size: 16px;
-    border-radius: 25px;
-    }
+    border-radius: 24px;
     &:hover {
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, .2);
-        transform: translatey(-1px);
+        box-shadow: $box-shadow;
+        transform: translateY(-1px);
     }
   
     &:active {
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, .2);
+        box-shadow: none;
         transform: scale(1);
     }
   
@@ -19,7 +20,7 @@ button {
         outline: none;
     }
     &.button--filled {
-        background-color: #3B3B3B;
+        background-color: $color-grey-dark;
         color: white;
         border-style: none;
     }
@@ -27,17 +28,18 @@ button {
         background-color: transparent;
         border-style: solid;
         //border-weight: 2px;
-        border-color: #3B3B3B;
-        color: #3B3B3B;
+        border-color: $color-grey-dark;
+        color: $color-grey-dark;
       }
     &.button--with-icon {
         display: flex;
         align-items: center;
-        .project_card_button_icon {
-            transform: translatey(-10%);
-            width: 15px;
-            height: 15px;
+        padding: 4px 8px;
+        svg {
+            width: 24px;
+            height: 24px;
             margin-left: 4px;
+            fill: $color-grey-dark;
         }
     }
 }

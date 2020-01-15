@@ -1,0 +1,22 @@
+{
+    "projects": [
+        { 
+            "title": "BLU360", 
+            "projectCard": {
+                "title": "BLU360",
+                "contribution": "UI / UX / Dev",
+                "tools": [
+                    "adobeXD",
+                    "react",
+                    "sass"
+                ],
+                "buttons": [
+                    {
+                        "type": "Case Study",
+                        "link": "blue360"
+                    }
+                ]
+            }
+        }
+    ]
+}
