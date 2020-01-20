@@ -1,6 +1,7 @@
 import React from 'react';
 import MouseAnimation from '../icons/animated/MouseAnimation';
 import logoFilled from '../icons/logoFilled.svg';
+import SocialLinks from '../uiElements/SocialLinks';
 import './home.scss';
 
 const Home = () => {
@@ -10,8 +11,13 @@ const Home = () => {
                 <h1>Joey Harig</h1>
                 <h2>a designer who can code</h2>
             </div>
-            <img className="home-background-logo" src={logoFilled} alt="logo"/>
+            <img   
+                className="home-background-logo" 
+                src={logoFilled} 
+                alt="logo"
+            />
             <MouseAnimation />
+            <SocialLinks />
         </section>
     );
 };

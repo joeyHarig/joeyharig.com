@@ -7,15 +7,17 @@ import {
  } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage';
-
-//import Icon from './components/icons/Icon';
+import Nav from './components/navigation/Nav';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Route path="/" component={ LandingPage } data={ Data } />
-      </Router>
+      <Nav />
+      <main>
+        <Router>
+          <Route path="/" component={ LandingPage } data={ Data } />
+        </Router>
+      </main>
     </div>
   );
 }

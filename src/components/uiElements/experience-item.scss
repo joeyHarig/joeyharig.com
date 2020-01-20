@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.experience-item {
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $color-grey-dark;
+        padding-bottom: 8px;
+    }
+    h2 { 
+        padding-bottom: 16px;
+        font-weight: 400;
+        .duration { 
+            margin-left: 32px;
+        }
+    }
+    p { 
+        line-height: 24px;
+    }
+}

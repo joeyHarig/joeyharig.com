@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.body-paragraph {
+    line-height: 32px;
+    margin-top: $margin-medium;
+    &.full {
+        width: 100%;
+    }
+    &.half {
+        width: 534px;
+    }
+}

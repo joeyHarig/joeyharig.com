@@ -38,9 +38,20 @@
         opacity: 10%;
         animation: fadeout 2s;
     }
+    .social-links {
+        position: absolute;
+        bottom: 0;
+        animation: fadein2 2s;
+    }
 }
 
-.mouse-animation-container { animation: fadeout 2s; }
+.mouse-animation_container { 
+    animation: fadein2 2s;
+    top: 75vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 @keyframes fadein {
     0%   { 
@@ -53,14 +64,18 @@
         transform: translateY(-24px); 
     }
     100%   { 
-        opacity: 100%; 
         transform: none;
     }
 }
 
+@keyframes fadein2 {
+    0%   { opacity: 0; }
+    20%   { opacity: 0; }
+}
+
 @keyframes fadeout {
     0%   { 
-        opacity: 60%; 
+        opacity: 80%; 
         height: 160vh;
         transform: translate(-50%, -18%);
     }

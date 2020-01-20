@@ -3,18 +3,24 @@ import React from 'react';
 import ProjectCard from '../uiElements/ProjectCard';
 import Header from '../uiElements/Header';
 
+import Logo from '../icons/logoFilled-red.svg';
 //import logoFilled from '../icons/logoFilled.svg';
 import './projects.scss';
-import '../uiElements/grid.scss';
+import '../uiElements/section-grid.scss';
 
 const Projects = props => {
     return (
         <section id="projects">
+            {/* <img 
+                className="about-me-background-logo" 
+                src={Logo} 
+                alt="logo"
+            /> */}
             <Header 
                 title="Selected Projects"
                 subtitle="2017 - 2020"
             />
-            <div className="grid">
+            <div className="section-grid body-section">
                 <ProjectCard 
                     title="BLU360"
                     contribution="UI / UX / Dev"
@@ -52,7 +58,6 @@ const Projects = props => {
                     contribution="Front End Web Development"
                     description="A website to certify you in the most ridiculous things"
                     tools={[
-                        "react",
                         "react",
                         "adobeIllustrator"
                     ]}

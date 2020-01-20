@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.social-links {
+    padding: $margin-medium;
+    a {
+        &:nth-child(2), &:nth-child(3) { margin-left: $margin-small }
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            opacity: 80%;
+            transition: 0.2s;
+        }
+        &:hover > svg { 
+            opacity: 100%;
+            transform: translateY(-2px); 
+        }
+    }
+}
+
+
+

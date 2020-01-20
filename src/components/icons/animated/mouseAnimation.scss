@@ -1,20 +1,15 @@
 
 .mouse-animation_container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     opacity: 60%;
-
+    transition: 0.2s;
     .animation-item {
         border-style: solid;
         border-color: white;
     }
-
     .animation-mouse {
         display: flex;
         justify-content: center;
@@ -23,7 +18,6 @@
         border-width: 2px;
         margin-bottom: 16px;
         border-radius: 16px; 
-
         div {
             margin-top: 8px;
             width: 4px;
@@ -31,9 +25,9 @@
             background-color: white;
             margin-bottom: 16px;
             border-radius: 16px;
+            transition: 0.4s;
         }
     }
-
     .animation-arrow {
         height: 12px;
         width: 12px;
@@ -44,16 +38,26 @@
         transform: rotate(45deg);
         animation: mouse_fade 4s infinite;
     }
-
     #arrow2 { animation-delay: 0.5s; }
     #arrow3 { animation-delay: 1s; }
+    &:hover {
+        opacity: 100%;
+        .animation-mouse > div {
+            animation: mouse_scroll 1.4s infinite;
+        }
+    }
 }
   
 @keyframes mouse_fade {
-    0%   { 
-        opacity: 0;
-    }
+    0%   { opacity: 0; }
     50% { opacity: 1; }
     90% { opacity: 0; }
     100% { opacity: 0; }
 }
+
+@keyframes mouse_scroll {
+    0%   { transform: none; }
+    30% { transform: translateY(8px) }
+    100%   { transform: none; }
+}
+

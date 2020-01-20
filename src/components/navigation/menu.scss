@@ -1,0 +1,41 @@
+@import '../../variables.scss';
+
+#menu {
+    width: 48px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: 0.2s;
+    animation: fadein2 2s; // animation located in home.scss
+    .menu-line {
+        background: white;
+        height: 5px;
+        transition: 0.4s;
+        &:first-child { width: 100%; }
+        &:nth-child(2) { width: 80%; }
+        &:nth-child(3) { width: 60%; }
+        &.colored { background: $color-grey-dark; }
+    }
+    &:hover {
+        cursor: pointer;
+        .menu-line { width: 100%; }
+    }
+    &.nav-open {
+        .menu-line { 
+            width: 100%;
+            background: white;
+        }
+        #menu-line-1 { 
+         transform: rotate(-45deg) translateY(360%); 
+        }
+        #menu-line-2 { 
+            width: 1px; 
+            visibility: hidden;
+        }
+        #menu-line-3 { 
+            transform: rotate(45deg) translateY(-360%);
+        }
+    }
+}

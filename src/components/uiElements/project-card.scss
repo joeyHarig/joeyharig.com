@@ -8,7 +8,10 @@
     height: 267px;
     box-shadow: $box-shadow;
   }
-  .project_card_photo { z-index: 2;}
+  .project_card_photo { 
+    z-index: 2;
+    background: white;
+  }
 }
   
   

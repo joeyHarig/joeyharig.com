@@ -13,4 +13,16 @@
     color: $color-grey-dark;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a { text-decoration: none; }
+
+ul, li { list-style: none outside none; }
+
+
+.body-section { 
+    width: 1116px;
+    margin-top: $margin-extra-large;
+}
