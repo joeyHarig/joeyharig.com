@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    opacity: 60%;
+    opacity: 0.6;
     transition: 0.2s;
     .animation-item {
         border-style: solid;
@@ -31,7 +31,7 @@
     .animation-arrow {
         height: 12px;
         width: 12px;
-        opacity: 0%;
+        opacity: 0;
         border-style: solid;
         border-width: 0px 2px 2px 0px;
         margin-bottom: 12px;
@@ -41,7 +41,7 @@
     #arrow2 { animation-delay: 0.5s; }
     #arrow3 { animation-delay: 1s; }
     &:hover {
-        opacity: 100%;
+        opacity: 1;
         .animation-mouse > div {
             animation: mouse_scroll 1.4s infinite;
         }
