@@ -3,48 +3,105 @@
 .project_card_container {
   display: flex;
   position: relative;
+  z-index: 2;
+  width: 100%;
+  // makes height = to width
+  &:before { 
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
   .project_card_photo, .project_card_info_container {
-    width: 267px;
-    height: 267px;
+    width: 50%;
+    height: auto;
     box-shadow: $box-shadow;
   }
   .project_card_photo { 
-    z-index: 2;
+    z-index: 3;
     background: white;
   }
-}
   
+}
   
 .project_card_info_container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: $margin-medium - 4px;
   background-color: $color-grey-lightest;
-  .info_item { padding-bottom: 8px; }
+  .info_item { padding-bottom: $margin-extra-small * 2; }
   h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
   }
   h2 {
-    font-size: 16px;
+    font-size: 1rem;
     font-style: italic;
     font-weight: 400;
   }
   p { line-height: 24px; }
   .project_card_tools_container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     h3 { font-weight: 600; }
     svg {
-      margin-left: 8px;
-      width: 24px;
-      height: 24px;
+      margin-left: $margin-extra-small * 2;
+      width: $img-medium;
+      height: $img-medium;
       fill: $color-grey-dark;
     }
   }
   .project_card_button_container {
     display: flex;
     margin-top: auto;
-    justify-content: space-around;
+    justify-content: flex-start;
+    :nth-child(2) { margin-left: auto; }
+  }
+}
+
+// -------------- PHONE --------------
+@media (max-width: $phone) { 
+  .project_card_container {
+    flex-direction: column;
+    &:before { padding-top: 0%; }
+    .project_card_photo, .project_card_info_container {
+      width: 100%;
+    }
+    .project_card_info_container {
+      .project_card_tools_container { margin: $margin-small 0 $margin-medium 0; }
+      .project_card_button_container {
+        :nth-child(2) { margin-left: $margin-small; }
+      }
+    }
+  }
+}
+
+// -------------- PHONE --------------
+@media (min-width: $phone + 1) and (max-width: $tablet) { 
+  .project_card_container {
+    flex-direction: column;
+    &:before { padding-top: 0%; }
+    .project_card_photo, .project_card_info_container {
+      width: 100%;
+      height: 50%;
+    }
+    .project_card_button_container {
+      :nth-child(2) { margin-left: $margin-small; }
+    }
+  }
+}
+// ipad pro 12.9in
+@media (min-width: $desktop) and (max-width: $desktop) and (orientation: portrait) {
+  .project_card_container {
+    flex-direction: column;
+    &:before { padding-top: 0%; }
+    .project_card_photo { width: 100%; } 
+    .project_card_info_container {
+      .project_card_tools_container { margin-bottom: $margin-medium; }
+      width: 100%;
+      height: 100%;
+    }
+    .project_card_button_container {
+      :nth-child(2) { margin-left: $margin-small; }
+    }
   }
 }

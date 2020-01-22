@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
 .experience-item {
+    &:nth-child(n+3) { margin-top: 16px; }
     h1 {
         font-size: 1.5rem;
         font-weight: 500;
@@ -16,5 +17,12 @@
     }
     p { 
         line-height: 24px;
+    }
+}
+
+// -------------- PHONE --------------
+@media (max-width: $phone) {
+    .experience-item { 
+        &:nth-child(n+2) { margin-top: 12px; }
     }
 }

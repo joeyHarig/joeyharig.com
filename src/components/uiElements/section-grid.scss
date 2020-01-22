@@ -6,3 +6,16 @@
     grid-gap: ($margin-large);
 }
 
+// -------------- PHONE --------------
+@media (max-width: $phone) {  
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+// -------------- RETINA DISPLAY --------------
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: $desktop) { 
+    .section-grid {
+        grid-gap: ($margin-medium);
+    }
+}

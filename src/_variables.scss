@@ -1,5 +1,4 @@
-// This file hold the scss values and media queries
-
+// This file holds the scss global values and media queries
 
 // COLORS
 $color-primary: #E72339;
@@ -16,3 +15,12 @@ $margin-large: 48px;
 $margin-medium: 24px;
 $margin-small: 12px;
 $margin-extra-small: 4px;
+
+// IMG AND ICONS
+$img-medium: 24px;
+$img-small: 16px;
+
+// MEDIA QUERY SIZES
+$phone: 640px;
+$tablet: 834px;
+$desktop: 1024px;

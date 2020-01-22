@@ -21,8 +21,37 @@ a { text-decoration: none; }
 
 ul, li { list-style: none outside none; }
 
+body{
+    overflow-x: hidden;
+}
 
 .body-section { 
-    width: 1116px;
+    width: 1096px;
     margin-top: $margin-extra-large;
+}
+
+// -------------- PHONE --------------
+@media (max-width: $phone) {
+    .body-section { 
+        max-width: 100vw;
+        margin-top: $margin-large;
+        padding: 0px $margin-small;
+    }
+}
+
+// -------------- TABLET --------------
+@media (min-width: $phone + 1) and (max-width: $tablet) { 
+    .body-section { 
+        max-width: 100vw;
+        margin-top: $margin-large ;
+        padding: 0px $margin-large ;
+    }
+}
+// ipad pro12.9in
+@media (min-width: $desktop) and (max-width: $desktop) and (orientation: portrait) {
+    .body-section { 
+        max-width: 100vw;
+        margin-top: $margin-large ;
+        padding: 0px $margin-large ;
+    }
 }
