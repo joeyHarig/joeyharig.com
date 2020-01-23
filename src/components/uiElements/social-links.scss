@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 
 .social-links {
-    padding: $margin-medium;
     a {
         &:nth-child(2), &:nth-child(3) { margin-left: $margin-small }
         svg {
@@ -15,8 +14,11 @@
             opacity: 1;
             transform: translateY(-2px); 
         }
+        &:nth-child(3) {
+            width: 20px;
+            height: 20px; 
+        }
     }
 }
-
 
 

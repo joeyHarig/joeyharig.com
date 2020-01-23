@@ -35,15 +35,21 @@
         left: 50%;
         transform: translate(-50%, -15%);
         height: 140vh;
+        width: 100vw;
         opacity: 0.1;
+        overflow: hidden;
         animation: fadeout 2s;
+        object-fit: cover;
     }
-    .social-links { animation: fadein2 2s; }
+    .social-links { 
+        animation: fadein2 2s;
+        padding: $margin-medium;
+    }
 }
 
 .mouse-animation_container { 
     animation: fadein2 2s;
-    bottom: 10vh;
+    bottom: 5vh;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -80,11 +86,11 @@
 // -------------- PHONE --------------
 @media (max-width: $phone) {
     #home {
-        height: 90vh;
+        height: 95vh;
         .home-title_container {
             top: 45%;
             h1 { 
-                font-size: 3.5rem;
+                font-size: 3rem;
                 letter-spacing: 8px; 
             }
             h2 {
@@ -97,7 +103,8 @@
             height: 100vh;
             transform: translate(-50%, -5%);
         }
-        .mouse-animation_container { bottom: 20vh; }
+        .mouse-animation_container { bottom: 10vh; }
+        .social-links { padding: $margin-small; }
     }
 }
 
@@ -119,6 +126,7 @@
         }
         .mouse-animation_container {
             bottom: 12vh;
+
         }
     }
 }

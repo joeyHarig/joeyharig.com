@@ -67,7 +67,7 @@
       width: 100%;
     }
     .project_card_info_container {
-      .project_card_tools_container { margin: $margin-small 0 $margin-medium 0; }
+      .project_card_tools_container { margin: 0 0 $margin-medium 0; }
       .project_card_button_container {
         :nth-child(2) { margin-left: $margin-small; }
       }
@@ -82,7 +82,7 @@
     &:before { padding-top: 0%; }
     .project_card_photo, .project_card_info_container {
       width: 100%;
-      height: 50%;
+      height: 100%;
     }
     .project_card_button_container {
       :nth-child(2) { margin-left: $margin-small; }

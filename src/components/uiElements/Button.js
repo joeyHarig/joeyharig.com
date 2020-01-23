@@ -11,7 +11,11 @@ const Button = props => {
     switch (props.type) {
         case 'View Code':
             button = 
-                <a href={ props.link } target="_blank" >
+                <a 
+                    href={ props.link } 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <button className="button--outlined button--with-icon">
                         <span>View Code</span>
                         <Icon icon="github" />
@@ -26,7 +30,11 @@ const Button = props => {
             break;
         case 'Visit Site':
             button =
-            <a href={ props.link } target="_blank" > 
+            <a 
+                href={ props.link }
+                target="_blank"
+                rel="noopener noreferrer"
+            > 
                     <button className="button--filled">Visit Site</button>
             </a>
             break;

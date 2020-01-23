@@ -1,0 +1,54 @@
+@import '../../variables.scss';
+
+#contact-me {
+    margin-top: $margin-large;
+    background: linear-gradient(135deg, $color-primary, $color-secondary);
+    padding: $margin-medium 0;
+    clip-path: polygon(0% 0%, 100% $margin-extra-large, 100% 100%, 0% 100%);
+    .body-section {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        span{ width: 50%; }
+        h1 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 200;
+            b {
+                font-size: 3rem;
+                color: white;
+            }
+        }
+        .social-links {
+            position: absolute;
+            right: 20%;
+            top: 50%;
+            transform: translate(50%, -50%);
+            &:nth-child(n+2) {
+                svg{ margin-left: $margin-medium; }
+            }
+            svg { 
+                width: 48px; 
+                height: 48px;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    #contact-me {
+        clip-path: polygon(0% 0%, 100% $margin-medium, 100% 100%, 0% 100%);
+        .body-section {
+            flex-direction: column;
+            align-items: center;
+            span{ width: 100%; }
+            .social-links {
+                position: relative;
+                padding: 0;
+                right: 0;
+                transform: none;
+            }
+        }
+    }
+}

@@ -10,7 +10,11 @@ const ProjectCard = props => {
     
     return (
         <div className="project_card_container">
-            <img className="project_card_photo" alt={ props.title } src="https://bulma.io/images/placeholders/256x256.png" ></img>
+            <img 
+                className="project_card_photo" 
+                alt={ props.title } 
+                src={ props.image } 
+            />
             <div className="project_card_info_container">
                 <h1 className="info_item">{ props.title }</h1>
                 <h2 className="info_item">{ props.contribution }</h2>
