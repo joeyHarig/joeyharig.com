@@ -9,7 +9,7 @@ import '../uiElements/section-grid.scss';
 // images
 import Blu360Cover from'../../photos/blu360-cover.png';
 import WTHCover from'../../photos/what-the-help-cover.png';
-import BoldLifeCover from'../../photos/bold-life-cover.png';
+import DesignCover from'../../photos/design-cover.png';
 import TraptrisCover from'../../photos/traptris-cover.png';
 import UCCover from'../../photos/useless-certifications-cover.png';
 import PigCover from'../../photos/pig-cover.png';
@@ -17,17 +17,12 @@ import PigCover from'../../photos/pig-cover.png';
 const Projects = props => {
     return (
         <section id="projects">
-            {/* <img 
-                className="about-me-background-logo" 
-                src={Logo} 
-                alt="logo"
-            /> */}
             <Header 
-                title="Selected Projects"
+                title="SELECTED PROJECTS"
                 subtitle="2017 - 2020"
             />
             <div className="section-grid body-section">
-                <ProjectCard 
+                {/* <ProjectCard 
                     title="BLU360"
                     contribution="UI / UX / Dev"
                     image={Blu360Cover}
@@ -43,7 +38,7 @@ const Projects = props => {
                             link: '/blu360'
                         },
                     ]}
-                />
+                /> */}
                 <ProjectCard 
                     title="What The Help"
                     contribution="UI / UX / Animation"
@@ -51,13 +46,14 @@ const Projects = props => {
                     description="A chore app for college kids on a budget to get work done around the house"
                     tools={[
                         "adobeXD",
+                        "adobeIllustrator",
                         "adobePhotoshop",
                         "adobeAfterEffects"
                     ]}
                     buttons={[
                         {
                             type: 'Case Study',
-                            link: '/whatthehelp'
+                            link: '/what_the_help'
                         },
                     ]}
                 />
@@ -67,10 +63,8 @@ const Projects = props => {
                     image={UCCover}
                     description="A website to certify you in the most ridiculous things"
                     tools={[
-                        "html",
-                        "css",
-                        "javascript",
-                        "adobeIllustrator"
+                        "adobeIllustrator",
+                        "javascript"
                     ]}
                     buttons={[
                         {
@@ -79,7 +73,7 @@ const Projects = props => {
                         },
                         {
                             type: 'View Code',
-                            link: 'https://www.github.com'
+                            link: 'https://github.com/joeyHarig/uselesscertifications'
                         }
                     ]}
                 />
@@ -89,17 +83,17 @@ const Projects = props => {
                     image={PigCover}
                     description="A virtual rendition of the dice game 'Pig' with a CPU opponent"
                     tools={[
-                        "react",
+                        "javascript",
                         "sass"
                     ]}
                     buttons={[
                         {
                             type: 'Visit Site',
-                            link: 'https://uselesscertifications.com'
+                            link: 'https://joeyharig.github.io/pig/'
                         },
                         {
                             type: 'View Code',
-                            link: 'https://www.github.com'
+                            link: 'https://github.com/joeyHarig/pig'
                         }
                     ]}
                 />
@@ -107,30 +101,30 @@ const Projects = props => {
                     title="Traptris"
                     contribution="Development"
                     image={TraptrisCover}
-                    description="A version of Tetris in python while using a Java gui library for the display"
+                    description="A version of Tetris coded in python using a Java gui library for the UI"
                     tools={[
                         "python"
                     ]}
                     buttons={[
                         {
                             type: 'View Code',
-                            link: 'https://www.github.com'
+                            link: 'https://github.com/joeyHarig/traptris'
                         }
                     ]}
                 />
                 <ProjectCard 
-                    title="Bold Life Apparel"
+                    title="Graphic Design"
                     contribution="Graphic Design"
-                    image={BoldLifeCover}
-                    description="A collection of logo and print designs for the Bold Life brand"
+                    image={DesignCover}
+                    description="A collection of my designs from school and client work"
                     tools={[
                         "adobeIllustrator",
                         "adobePhotoshop"
                     ]}
                     buttons={[
                         {
-                            type: 'Case Study',
-                            link: '/bold-life-apparel'
+                            type: 'View',
+                            link: '/design_gallery'
                         },
                     ]}
                 />

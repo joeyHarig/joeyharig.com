@@ -15,7 +15,8 @@
         align-items: center;
         h1, h2 { 
             animation: fadein 2.5s; 
-            color: white; 
+            color: white;
+            transform: translateX(2px); 
         }
         h1 {
             font-size: 8rem;
@@ -40,6 +41,7 @@
         overflow: hidden;
         animation: fadeout 2s;
         object-fit: cover;
+        pointer-events: none;
     }
     .social-links { 
         animation: fadein2 2s;
@@ -64,9 +66,6 @@
     20%   { 
         opacity: 0; 
         transform: translateY(-24px); 
-    }
-    100%   { 
-        transform: none
     }
 }
 
@@ -99,10 +98,7 @@
                 margin-top: $margin-small;
             }
         }
-        .home-background-logo {
-            height: 100vh;
-            transform: translate(-50%, -5%);
-        }
+        .home-background-logo { height: 100vh; }
         .mouse-animation_container { bottom: 10vh; }
         .social-links { padding: $margin-small; }
     }

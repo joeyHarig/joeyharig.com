@@ -1,0 +1,46 @@
+@import '../../variables.scss';
+
+.case-study-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $margin-large;
+    margin-bottom: $margin-large*2;
+    img, video { width: 100%; }
+    video {
+        outline: none;
+        box-shadow: $box-shadow;
+
+    }
+    p { font-size: 1.5rem; line-height: 48px; }
+    &.txt, &.video { grid-template-columns: 1fr; }
+    &.imgs { 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        img { transition: 0.3s; }
+        img:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.sub-header {
+    font-size: 2rem;
+}
+
+// -------------- PHONE --------------
+@media (max-width: $phone) {
+    .case-study-section {
+        grid-template-columns: 1fr; 
+        grid-gap: $margin-medium;
+        margin-bottom: $margin-large;
+        p { font-size: 1rem; line-height: 32px; }
+        &.imgs { grid-template-columns: 1fr 1fr; }
+    }
+}
+
+// -------------- TABLET --------------
+@media (min-width: $phone + 1) and (max-width: $tablet) {
+    .case-study-section {
+        margin-bottom: $margin-large;
+        p { font-size: 1rem; line-height: 32px; }
+    }
+}

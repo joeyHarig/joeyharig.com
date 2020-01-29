@@ -2,9 +2,8 @@
 
 #about-me {
     position: relative;
-    margin-left: 50%;
     margin-top: $margin-extra-large * 3/2;
-    transform: translateX(-50%);
+    z-index: -1;
     .about-me-title {
         color: $color-grey-dark;
         font-size: 3rem;
@@ -17,7 +16,8 @@
     .about-me-background-logo {
         position: absolute;
         transform: translate(40%, -120%);
-        z-index: -2;
+        z-index: -1;
+        pointer-events: none;
         width: 1400px;
         opacity: 0.12;
     }
@@ -32,24 +32,11 @@
             b { font-size: 2.5rem; }
             &.top-margin { margin-top: $margin-large * 2; }
         }
-        .about-me-background-logo {
-            display: none;
-        } 
+        .about-me-background-logo { display: none; } 
     }
 }
 
 // -------------- TABLET --------------
 @media (min-width: $phone) and (max-width: $tablet) {
-    #about-me > .about-me-background-logo {
-        transform: translate(30%, -160%);
-        width: 100vw;
-    }
-}
-
-// ipad pro12.9in
-@media (min-width: $desktop) and (max-width: $desktop) and (orientation: portrait) {
-    #about-me > .about-me-background-logo {
-        transform: translate(30%, -130%);
-        width: 100vw;
-    }
+    #about-me .about-me-background-logo { display: none; } 
 }

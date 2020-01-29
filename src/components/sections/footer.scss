@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+footer {
+    background-color: $color-grey-dark;
+    .body-section {
+        padding-top: $margin-medium;
+        padding-bottom: $margin-medium;
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        a {
+            opacity: 0.8;
+            display: flex;
+            align-content: center;
+            transition: 0.2s;
+            img { width: 24px; height: 24px; }
+            h3 {
+                margin-left: $margin-extra-small;
+                color: white;
+                font-weight: 300;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .social-links {
+            display: flex;
+        }
+    }
+}

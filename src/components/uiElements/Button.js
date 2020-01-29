@@ -28,6 +28,12 @@ const Button = props => {
                     <button className="button--filled">Case Study</button>
                 </Link>;
             break;
+        case 'View':
+            button = 
+                <Link to={ props.link} >
+                    <button className="button--filled">View</button>
+                </Link>;
+            break;
         case 'Visit Site':
             button =
             <a 

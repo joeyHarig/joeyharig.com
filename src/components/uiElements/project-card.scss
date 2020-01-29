@@ -2,8 +2,6 @@
 
 .project_card_container {
   display: flex;
-  position: relative;
-  z-index: 2;
   width: 100%;
   // makes height = to width
   &:before { 
@@ -67,6 +65,7 @@
       width: 100%;
     }
     .project_card_info_container {
+      padding: 16px;
       .project_card_tools_container { margin: 0 0 $margin-medium 0; }
       .project_card_button_container {
         :nth-child(2) { margin-left: $margin-small; }
@@ -75,16 +74,16 @@
   }
 }
 
-// -------------- PHONE --------------
+// -------------- TABLET --------------
 @media (min-width: $phone + 1) and (max-width: $tablet) { 
   .project_card_container {
     flex-direction: column;
     &:before { padding-top: 0%; }
     .project_card_photo, .project_card_info_container {
       width: 100%;
-      height: 100%;
     }
     .project_card_button_container {
+      margin-top: $margin-medium;
       :nth-child(2) { margin-left: $margin-small; }
     }
   }

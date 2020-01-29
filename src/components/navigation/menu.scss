@@ -22,20 +22,16 @@
         cursor: pointer;
         .menu-line { width: 100%; }
     }
-    &.nav-open {
+    &.open {
         .menu-line { 
             width: 100%;
             background: white;
-        }
-        #menu-line-1 { 
-         transform: rotate(-45deg) translateY(360%); 
-        }
-        #menu-line-2 { 
-            width: 1px; 
-            visibility: hidden;
-        }
-        #menu-line-3 { 
-            transform: rotate(45deg) translateY(-360%);
+            &:first-child { transform: rotate(-45deg) translateY(360%); }
+            &:nth-child(2) { 
+                width: 1px; 
+                visibility: hidden;
+            }
+            &:nth-child(3) { transform: rotate(45deg) translateY(-360%); }
         }
     }
 }

@@ -12,7 +12,7 @@
 }
 
 // -------------- PHONE --------------
-@media (max-width: $phone) {
+@media (max-width: $tablet) {
     .body-paragraph {
         &.half { width: 100%; }
     }

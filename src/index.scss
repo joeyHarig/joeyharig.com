@@ -28,13 +28,14 @@ body{
 .body-section { 
     width: 1096px;
     max-width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
     margin-top: $margin-extra-large;
 }
 
 // -------------- PHONE --------------
 @media (max-width: $phone) {
     .body-section { 
-        max-width: 100vw;
         margin-top: $margin-large;
         padding: 0px $margin-medium;
     }
@@ -43,7 +44,6 @@ body{
 // -------------- TABLET --------------
 @media (min-width: $phone + 1) and (max-width: $tablet) { 
     .body-section { 
-        max-width: 100vw;
         margin-top: $margin-large ;
         padding: 0px $margin-large ;
     }
@@ -51,7 +51,6 @@ body{
 // ipad pro12.9in
 @media (min-width: $desktop) and (max-width: $desktop) and (orientation: portrait) {
     .body-section { 
-        max-width: 100vw;
         margin-top: $margin-large ;
         padding: 0px $margin-large ;
     }

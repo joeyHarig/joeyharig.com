@@ -37,11 +37,11 @@ const Input = props => {
         return (
             <div className="input-container">
                 <input
+                    disabled = { props.isFormValid ? "" : "disabled" }
                     className="input_submit"
                     type="submit"
-                    name={ props.name } 
-                >
-                    <Icon icon="react" />    
+                    name={props.name}
+                >    
                 </input>
             </div>
         );

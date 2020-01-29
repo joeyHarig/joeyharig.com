@@ -10,11 +10,18 @@
 @media (max-width: $phone) {  
     .section-grid {
         grid-template-columns: 1fr;
+        grid-gap: ($margin-large);
     }
 }
 
 // -------------- RETINA DISPLAY --------------
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: $desktop) { 
+@media
+(min-width: $desktop) and (-webkit-min-device-pixel-ratio: 2),
+(min-width: $desktop) and (min--moz-device-pixel-ratio: 2),
+(min-width: $desktop) and (-o-min-device-pixel-ratio: 2/1),
+(min-width: $desktop) and (min-device-pixel-ratio: 2),
+(min-width: $desktop) and (min-resolution: 192dpi),
+(min-width: $desktop) and (min-resolution: 2dppx) { 
     .section-grid {
         grid-gap: ($margin-medium);
     }

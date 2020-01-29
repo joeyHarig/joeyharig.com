@@ -6,11 +6,28 @@ import './contact-form.scss';
 
 const ContactForm = () => {
     
-    const [isFormValid, setIsFormValid] = useState(false);
-    const [isNameValid, setIsNameValid] = useState('');
-    const [isEmailValid, setIsEmailValid] = useState('');
-    const [isSubjectValid, setIsSubjectValid] = useState('');
-    const [isMessageValid, setIsMessageValid] = useState('');
+    const [isFormValid, setIsFormValid] = useState(
+        {
+            inputs: {
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+            },
+            form: false
+        }
+    );
+
+    const formValidationHandler = (input) => {
+        
+    };
+
+
+
+    // const [isNameValid, setIsNameValid] = useState('');
+    // const [isEmailValid, setIsEmailValid] = useState('');
+    // const [isSubjectValid, setIsSubjectValid] = useState('');
+    // const [isMessageValid, setIsMessageValid] = useState('');
     
     return (
         <form className="contact-form" netlify>
@@ -31,8 +48,12 @@ const ContactForm = () => {
             />
             <Input
                 type="textarea"
-                name="Message"
+                name="message"
                 placeholder="Message"
+            />
+            <Input
+                type="submit"
+                name="submit"
             />
         </form>
     );
