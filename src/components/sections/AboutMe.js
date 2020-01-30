@@ -13,11 +13,11 @@ const AboutMe = () => {
             <h1 className="about-me-title">A Little <b>About Me</b></h1>
             <Paragraph 
                 size="half"
-                content="I am a designer who specializes in UI, UX and front-end web development. I studied graphic design, web development and marketing at the University of Colorado, graduating in May 2020."
+                content="Hi, I’m Joey, a creative thinker who specializes in UI, UX and front end web development. I always stay open and eager to learn about tools, methods, and mindsets that can help solve problems in new ways."
             />
             <Paragraph 
                 size="half"
-                content="I am a designer who specializes in UI, UX and front-end web development. I studied graphic design, web development and marketing at the University of Colorado, graduating in 2020. I bring a marketing mentality to every site I design and build."
+                content="With a degree in Marketing and Creative Technologies, I have learned to place the user at the focal point of every project. I enjoy building new experiences and learning how to make those experiences more accessible, understandable and fun."
             />
             <h1 className="about-me-title top-margin">My <b>Experience</b></h1>
             <div className="section-grid">
