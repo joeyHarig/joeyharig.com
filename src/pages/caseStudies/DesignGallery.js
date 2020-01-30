@@ -26,10 +26,6 @@ const DesignGallery = () => {
             />
             <section className="body-section">
                 <CaseStudySection 
-                    type='sub-header'
-                    content="Poster Design"
-                />
-                <CaseStudySection 
                     type='imgs'
                     img={[
                         HorrorFilmFest,
@@ -45,10 +41,6 @@ const DesignGallery = () => {
                     ]}
                 />
                 <CaseStudySection 
-                    type='sub-header'
-                    content="Expressive Typography"
-                />
-                <CaseStudySection 
                     type='imgs'
                     img={[
                         EX1,
@@ -62,10 +54,6 @@ const DesignGallery = () => {
                         'Symphony Mailer', 
                         'Symphony Mailer Back'
                     ]}
-                />
-                <CaseStudySection 
-                    type='sub-header'
-                    content="Graphic T-Shirts"
                 />
                 <CaseStudySection 
                     type='imgs'
