@@ -29,7 +29,7 @@ const AboutMe = () => {
                 />
                 <ExperienceItem 
                     title="UX / Video Animation Intern"
-                    company="Chipper by Cramfighter"
+                    company="Chipper"
                     duration="Jan - Aug 2019"
                     description="I reported on UX research that I conducted through surveys, focus groups, and user interviews. I also animated promotional / instructional videos for Instagram and YouTube."
                 />
@@ -41,9 +41,9 @@ const AboutMe = () => {
                 />
                 <ExperienceItem 
                     title="Percussion Instructor"
-                    company="Boulder Valley School District"
+                    company="BVSD"
                     duration="2017 - Present"
-                    description="In the evenings, I love teaching at Fairview Highs School where I run after school percussion rehersals, design shows, and give private lesson."
+                    description="In the evenings, I love teaching at Fairview High School where I run after school percussion rehersals, design shows, and give private lessons."
                 />
             </div>
             <img 
