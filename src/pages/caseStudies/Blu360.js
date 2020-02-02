@@ -43,21 +43,6 @@ const Blu360 = () => {
                     content="Process"
                 />
                 <CaseStudySection 
-                    type='imgs'
-                    img={[
-                        Blu360Icon,
-                        CoverPhoto, 
-                        CoverPhoto, 
-                        CoverPhoto
-                    ]}
-                    alt={[
-                        'img', 
-                        'img', 
-                        'img', 
-                        'img'
-                    ]}
-                />
-                <CaseStudySection 
                     type='txt'
                     content={
                         "The final design ended up looking clean, modern, and simple to place focus on usability and efficiency. The front end was written using React.js and Scss for maximum scalability.  Different components could be individually rendered and re-rendered to reduce the size of network requests on work sites where cellular data and wifi are limited."
