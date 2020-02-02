@@ -22,7 +22,7 @@ const Projects = props => {
                 subtitle="2017 - 2020"
             />
             <div className="section-grid body-section">
-                {/* <ProjectCard 
+                <ProjectCard 
                     title="BLU360"
                     contribution="UI / UX / Dev"
                     image={Blu360Cover}
@@ -38,7 +38,7 @@ const Projects = props => {
                             link: '/blu360'
                         },
                     ]}
-                /> */}
+                />
                 <ProjectCard 
                     title="What The Help"
                     contribution="UI / UX / Animation"
