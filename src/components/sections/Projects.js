@@ -7,6 +7,7 @@ import './projects.scss';
 import '../uiElements/section-grid.scss';
 
 // images
+import PortfolioCover from'../../photos/portfolio-cover.png';
 import Blu360Cover from'../../photos/blu360-cover.png';
 import WTHCover from'../../photos/what-the-help-cover.png';
 import DesignCover from'../../photos/design-cover.png';
@@ -22,6 +23,23 @@ const Projects = props => {
                 subtitle="2017 - 2020"
             />
             <div className="section-grid body-section">
+            <ProjectCard 
+                    title="Portfolio"
+                    contribution="UI / UX / Dev"
+                    image={PortfolioCover}
+                    description="View the code and thought process behind designing and structuring my portfolio"
+                    tools={[
+                        "adobeXD",
+                        "react",
+                        "sass"
+                    ]}
+                    buttons={[
+                        {
+                            type: 'View Code',
+                            link: 'https://github.com/joeyHarig/joeyharig.com'
+                        }
+                    ]}
+                />
                 <ProjectCard 
                     title="BLU360"
                     contribution="UI / UX / Dev"
@@ -64,7 +82,8 @@ const Projects = props => {
                     description="A website to certify you in the most ridiculous things"
                     tools={[
                         "adobeIllustrator",
-                        "javascript"
+                        "javascript",
+                        "googleAnalytics"
                     ]}
                     buttons={[
                         {

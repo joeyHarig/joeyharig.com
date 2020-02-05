@@ -3,6 +3,7 @@
 #about-me {
     position: relative;
     margin-top: $margin-extra-large * 3/2;
+    margin-bottom: $margin-extra-large;
     z-index: -1;
     .about-me-title {
         color: $color-grey-dark;
@@ -27,6 +28,7 @@
 @media (max-width: $phone) {
     #about-me {
         margin-top: $margin-large * 2;
+        margin-bottom: $margin-large;
         .about-me-title { 
             font-size: 2.5rem;
             b { font-size: 2.5rem; }

@@ -1,11 +1,11 @@
 @import '../../variables.scss';
 
 .input-container {
+    margin-bottom: $margin-medium;
     input, textarea {
         width: 100%;
-        opacity: 0.9;
+        opacity: 0.85;
         padding: $margin-small;
-        margin-bottom: $margin-medium;
         line-height: 24px;
         background-size: 15px 15px;
         background-repeat: no-repeat;
@@ -21,13 +21,52 @@
             box-shadow: $box-shadow;
             opacity: 1;
         }
-        &[type=submit] {
-            // margin-left: 50%;
-            // transform: translateX(-50%);
-            // width: 50%;
-            background: white;
-            opacity: 0.5;
-            color: $color-grey-dark;
+    }
+    label {
+        margin-top: 48px;
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 300;
+    }
+}
+
+.input_submit {
+    margin-bottom: $margin-medium;
+    padding: $margin-small;
+    outline: none;
+    border: none;
+    background: white;
+    color: $color-grey-dark;
+    width: 50%;
+    transition: 0.2s;
+    border-radius: none;
+    &:focus { outline: none; }
+    &.valid {
+        opacity: 1;
+        &:hover {
+            box-shadow: $box-shadow;
+            cursor: pointer;
         }
+    }
+    &.disabled {
+        &:hover {
+            cursor: not-allowed;
+        }
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: $phone) {
+    .input-container {
+        margin-bottom: $margin-small;
+        label {
+            margin-top: 48px;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 300;
+        }
+    }
+    .input_submit {
+        width: 100%; 
     }
 }

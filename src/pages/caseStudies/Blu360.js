@@ -2,7 +2,6 @@ import React from 'react';
 
 import Header from '../../components/uiElements/Header';
 import CoverPhoto from '../../photos/blu360-cover.png';
-import Blu360Icon from '../../photos/blu360-icon.png';
 import CaseStudySection from '../../components/sections/CaseStudySection';
 
 const Blu360 = () => {   

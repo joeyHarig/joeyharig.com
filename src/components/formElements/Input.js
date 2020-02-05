@@ -1,51 +1,110 @@
-import React from 'react';
-
+import React, { useReducer, useEffect } from 'react';
+import { validate } from './validators';
 import './input.scss';
-import Icon from '../icons/Icon';
+
+const inputReducer = (state, action) => {
+    switch (action.type) {
+        case 'CHANGE' :
+            return {
+                ...state,
+                value: action.val,
+                hasChanged: true,
+                isValid: validate(action.val, action.validators)
+            };
+        case 'BLUR' :
+            return {
+                ...state,
+                hasChanged: true
+            };
+        default :
+            return state;
+    }
+};
 
 const Input = props => {
-    if (props.type === 'text') {
-        return (
-            <div className="input-container">
-                <label className={!props.validated ? 'invalid' : '' }>{ props.invalidLabel }</label>
+    const [inputState, dispatch] = useReducer(inputReducer,{
+        value: '',
+        hasChanged: false,
+        isValid: false
+    });
+
+    const { id, onInput, errorText  } = props;
+    const { value, isValid, hasChanged } = inputState;
+
+    useEffect(() => {
+        onInput(id, value, isValid)
+    }, [id, value, isValid, onInput]);
+
+    const changeHandler = event => {
+        dispatch({
+            type: 'CHANGE',
+            state: inputState,
+            val: event.target.value,
+            validators: props.validators
+        });
+    };
+
+    const blurHandler = () => {
+        dispatch({
+            type: 'BLUR'
+        });
+    };
+
+    let element;
+
+    switch (props.type) {
+        case 'text' : 
+            element =
                 <input
-                    className={`${props.validated ? 'valid' : 'invalid'} input_text`} 
-                    type="text" 
-                    name={ props.name } 
+                    className={`${isValid ? 'valid' : ''}  input_text`} 
+                    type={ id } 
+                    name={ id } 
                     placeholder={ props.placeholder } 
-                    autoComplete="off"
+                    onChange={ changeHandler }
+                    onBlur={ blurHandler }
+                    value={ value }
                 />
-            </div>
-        );
-    }
-    else if (props.type === 'textarea') {
-        return (
-            <div className="input-container">
-                <label className={!props.validated ? 'invalid' : '' }>{ props.invalidLabel }</label>
+            break;
+        case 'textarea' :
+            element = 
                 <textarea
-                    className={`${props.validated ? 'valid' : ''} ${!props.validated ? 'invalid' : '' } input_textarea`}  
-                    type="text" 
-                    name={ props.name } 
+                    className={`${isValid ? 'valid' : ''} input_textarea`}  
+                    type={ id } 
+                    name={ id } 
                     placeholder={ props.placeholder }
                     rows="10"
-                    autoComplete="off"
+                    onChange={ changeHandler }
+                    value={ value }
                 />
-            </div>
-        );
-    }
-    else if (props.type === 'submit') {
-        return (
-            <div className="input-container">
-                <input
-                    disabled = { props.isFormValid ? "" : "disabled" }
-                    className="input_submit"
+            break;
+        case 'submit' : 
+            element =
+                <button
+                    disabled={ props.isFormValid ? "valid" : "disabled" }
+                    className={ `${props.isFormValid ? "valid" : "disabled"} input_submit` }
                     type="submit"
-                    name={props.name}
-                >    
-                </input>
-            </div>
-        );
+                    
+                    onClick={ props.onClick }
+                > 
+                    Send
+                </button>
+            break;
+        default : element = <div/>
     }
+    
+    return (
+        <div className="input-container">
+            { element }
+            { !isValid & hasChanged ? (
+                    <label className="label-invalid" >
+                        { errorText }
+                    </label>
+                ) : (
+                    null
+                )
+            }
+        </div>
+    );
 };
 
 export default Input;

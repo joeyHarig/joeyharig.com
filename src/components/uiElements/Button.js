@@ -16,7 +16,7 @@ const Button = props => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <button className="button--outlined button--with-icon">
+                    <button className="button button--outlined button--with-icon">
                         <span>View Code</span>
                         <Icon icon="github" />
                     </button>
@@ -25,13 +25,13 @@ const Button = props => {
         case 'Case Study':
             button = 
                 <Link to={ `/projects${props.link}` }>
-                    <button className="button--filled">Case Study</button>
+                    <button className="button button--filled">Case Study</button>
                 </Link>;
             break;
         case 'View':
             button = 
                 <Link to={ props.link} >
-                    <button className="button--filled">View</button>
+                    <button className="button button--filled">View</button>
                 </Link>;
             break;
         case 'Visit Site':
@@ -41,7 +41,7 @@ const Button = props => {
                 target="_blank"
                 rel="noopener noreferrer"
             > 
-                    <button className="button--filled">Visit Site</button>
+                    <button className="button button--filled">Visit Site</button>
             </a>
             break;
         default: button = <div/>;

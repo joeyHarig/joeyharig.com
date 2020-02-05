@@ -5,7 +5,7 @@ import CoverPhoto from '../../photos/what-the-help-cover.png';
 import WTHScreens from '../../photos/wth-screens.png';
 import WTHShirts from '../../photos/wth-shirts.png';
 import WTHMerch from '../../photos/wth-merch.png';
-import Video from '../../photos/wth-video.mp4'
+//import Video from '../../photos/wth-video.mp4'
 import CaseStudySection from '../../components/sections/CaseStudySection';
 
 const WhatTheHelp = () => {   
@@ -17,11 +17,11 @@ const WhatTheHelp = () => {
                 subtitle="UI / UX / Animation"
             />
             <section className="body-section">
-                <CaseStudySection 
+                {/* <CaseStudySection 
                     type= 'video'
                     vid={ Video }
 
-                />
+                /> */}
                 <CaseStudySection 
                     type='txt'
                     content={

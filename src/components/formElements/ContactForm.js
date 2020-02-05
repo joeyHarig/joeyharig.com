@@ -1,60 +1,132 @@
-import React from 'react';
-import { useState } from 'react';
-
+import React, { useCallback, useReducer } from 'react';
+import { 
+    VALIDATOR_REQUIRE, 
+    VALIDATOR_EMAIL, 
+    VALIDATOR_MINLENGTH
+} from './validators';
 import Input from './Input';
 import './contact-form.scss';
 
-const ContactForm = () => {
-    
-    const [isFormValid, setIsFormValid] = useState(
-        {
-            inputs: {
-                name: '',
-                email: '',
-                subject: '',
-                message: '',
-            },
-            form: false
-        }
-    );
+const formReducer = (state, action) => {
+    switch (action.type) {
+        case 'INPUT_CHANGE':
+            let formIsValid = true;
+            for (const inputId in state.inputs) {
+                if (inputId === action.inputId) {
+                    formIsValid = formIsValid && action.isValid;
+                } else {
+                    formIsValid = formIsValid && state.inputs[inputId].isValid;
+                }
+            }
+            return {
+                ...state,
+                inputs: {
+                    ...state.inputs,
+                    [action.inputId]: {
+                        value: action.value,
+                        isValid: action.isValid
+                    }
+                },
+                isValid: formIsValid
+            }
+        default:
+            return state;
+    }
+};
 
-    const formValidationHandler = (input) => {
-        
+const ContactForm = () => {
+
+    const [formState, dispatch] = useReducer(formReducer, {
+        inputs: {
+            name: {
+                value: '',
+                isValid: false
+            },
+            email: {
+                value: '',
+                isValid: false
+            },
+            subject: {
+                value: '',
+                isValid: false
+            },
+            message: {
+                value: '',
+                isValid: false
+            }
+        },
+        isValid: false
+    });
+
+    const inputHandler = useCallback((id, value, isValid) => {
+        dispatch({
+            type: id !== 'submit' ? 'INPUT_CHANGE' : '',
+            inputId: id,
+            isValid: isValid,
+            value: value
+        });
+    }, []);
+
+    const submitHandler = event => {
+        event.preventDefault();
+        console.log(formState);
     };
 
-
-
-    // const [isNameValid, setIsNameValid] = useState('');
-    // const [isEmailValid, setIsEmailValid] = useState('');
-    // const [isSubjectValid, setIsSubjectValid] = useState('');
-    // const [isMessageValid, setIsMessageValid] = useState('');
-    
     return (
-        <form className="contact-form" netlify>
+        <form 
+            className="contact-form"
+            //onSubmit={ submitHandler }
+            name="contact"
+            method="post"
+        >
+            <input 
+                type="hidden" 
+                name="contact" 
+                value="contact" 
+            />
             <Input
                 type="text"
-                name="name"
+                id="name"
+                validators={[VALIDATOR_REQUIRE()]}
                 placeholder="Full Name"
+                errorText="Please enter a valid name"
+                onInput={ inputHandler }
             />
             <Input
                 type="text"
-                name="email"
+                id="email"
+                validators={[
+                    VALIDATOR_REQUIRE(),
+                    VALIDATOR_EMAIL()
+                ]}
                 placeholder="Email"
+                errorText="Please enter a valid email"
+                onInput={ inputHandler }
             />
             <Input
                 type="text"
-                name="subject"
+                id="subject"
+                validators={[VALIDATOR_REQUIRE()]}
                 placeholder="Subject"
+                errorText="Please enter a valid subject line"
+                onInput={ inputHandler }
             />
             <Input
                 type="textarea"
-                name="message"
+                id="message"
+                validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(5)]}
                 placeholder="Message"
+                errorText="Please enter a valid message"
+                onInput={ inputHandler }
             />
-            <Input
+            <button
                 type="submit"
-                name="submit"
-            />
+                disabled={ !formState.isValid }
+                className={ `${formState.isValid ? "valid" : "disabled"} input_submit` }
+                // onClick={ submitHandler }
+            >
+                Send
+            </button>
         </form>
     );
 };

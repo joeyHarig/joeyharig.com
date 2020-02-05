@@ -45,7 +45,8 @@ const CaseStudtSection = props => {
                         Your browser does not support the video tag.
                     </video>
                 </div>
-        default: new Error;
+            break;
+        default: section = <div />
     }
     return section;
 };

@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-button {
+.button {
     cursor: pointer;
     transition-duration: 0.2s;
     padding: 8px 12px;
@@ -34,12 +34,25 @@ button {
     &.button--with-icon {
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
         padding: 4px 8px;
+        :first-child {
+            margin-right: 4px;
+        }
         svg {
             width: 24px;
             height: 24px;
-            padding-left: 4px;
             fill: $color-grey-dark;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    button {
+        &.button--with-icon {
+            :first-child {
+                margin-right: 0px;
+            }
         }
     }
 }
