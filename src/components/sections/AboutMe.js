@@ -22,13 +22,13 @@ const AboutMe = () => {
             <h1 className="about-me-title top-margin">My <b>Experience</b></h1>
             <div className="section-grid">
                 <ExperienceItem 
-                    title="Digitl Media Intern"
+                    title="Web Development Intern"
                     company="Mortenson"
                     duration="May 2019 - Present"
                     description="I designed, developed and presented new software using AdobeXD, React.js, and Scss. I also maintained the public facing Sitecore website and animated videos for national award submissions."
                 />
                 <ExperienceItem 
-                    title="UX / Video Animation Intern"
+                    title="UX / Motion Design Intern"
                     company="Chipper"
                     duration="Jan - Aug 2019"
                     description="I reported on UX research that I conducted through surveys, focus groups, and user interviews. I also animated promotional / instructional videos for Instagram and YouTube."
