@@ -4,6 +4,8 @@ import {
   Switch,
   BrowserRouter as Router
  } from 'react-router-dom';
+ // Google Analytics Package
+ import ReactGA from 'react-ga';
 
 import ScrollToTop from './components/ScrollToTop';
 import LandingPage from './pages/LandingPage';
@@ -13,8 +15,10 @@ import DesignGallery from './pages/caseStudies/DesignGallery';
 import Nav from './components/navigation/Nav';
 import Footer from './components/sections/Footer';
 
-function App() {
+ReactGA.initialize('UA-148592758-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
+const App = () => {
   return (
     <Router>
       <ScrollToTop />
@@ -42,6 +46,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
