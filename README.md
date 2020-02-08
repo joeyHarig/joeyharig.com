@@ -16,7 +16,7 @@ The site is hosted on Netlify, using their CMS for the handeling of form submiss
 ### Features to Check Out!
 
 * #### Icon Component
-** The custom icon svg component takes the icon name as a parameter and then pulls the svg <path> tags from a json file. The component then returns an svg element. This process ensures that all svgs are proportionate and easy to work with. 
+  * The custom icon svg component takes the icon name as a parameter and then pulls the svg <path> tags from a json file. The component then returns an svg element. This process ensures that all svgs are proportionate and easy to work with. 
 
 * #### Form Validator
-** The contact form component utilizes the useReducer and useCallback hooks to manage the state of the input values and validations to dynamically update the css classes and render error labels. 
+  * The contact form component utilizes the useReducer and useCallback hooks to manage the state of the input values and validations to dynamically update the css classes and render error labels. 
