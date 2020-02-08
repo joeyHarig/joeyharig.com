@@ -81,7 +81,7 @@ const ContactForm = () => {
         >
             <input 
                 type="hidden" 
-                name="contact" 
+                name="form-name" 
                 value="contact" 
             />
             <Input
