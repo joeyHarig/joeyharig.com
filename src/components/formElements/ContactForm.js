@@ -67,16 +67,12 @@ const ContactForm = () => {
         });
     }, []);
 
-    const submitHandler = event => {
-        event.preventDefault();
-    };
-
     return (
         <form 
             className="contact-form"
             name="contact"
             method="post"
-            action="/#contact"
+            action="/"
         >
             <input 
                 type="hidden" 
@@ -122,7 +118,6 @@ const ContactForm = () => {
                 type="submit"
                 disabled={ !formState.isValid }
                 className={ `${formState.isValid ? "valid" : "disabled"} input_submit` }
-                onClick={ submitHandler }
             >
                 Send
             </button>
