@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router
  } from 'react-router-dom';
  // Google Analytics Package
- import ReactGA from 'react-ga';
+import ReactGA from 'react-ga';
 
 import ScrollToTop from './components/ScrollToTop';
 import LandingPage from './pages/LandingPage';
@@ -16,9 +16,12 @@ import Nav from './components/navigation/Nav';
 import Footer from './components/sections/Footer';
 
 ReactGA.initialize('UA-148592758-2');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => {
+  
+  // Log pageview in GA
+  ReactGA.pageview(window.location.pathname + window.location.search);
+  
   return (
     <Router>
       <ScrollToTop />
