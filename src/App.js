@@ -4,7 +4,7 @@ import {
   Switch,
   BrowserRouter as Router
  } from 'react-router-dom';
-
+ import ReactGA from 'react-ga';
 import ScrollToTop from './components/ScrollToTop';
 import LandingPage from './pages/LandingPage';
 import Blu360 from './pages/caseStudies/Blu360';
