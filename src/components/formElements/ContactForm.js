@@ -4,6 +4,7 @@ import {
     VALIDATOR_EMAIL, 
     VALIDATOR_MINLENGTH
 } from './validators';
+import ReactGA from 'react-ga';
 import Input from './Input';
 import './contact-form.scss';
 
@@ -67,6 +68,11 @@ const ContactForm = () => {
         });
     }, []);
 
+    const trackGAEvent = ReactGA.event({
+        category: 'Form Submission',
+        action: 'Contact Form Submitted'
+    });
+
     return (
         <form 
             className="contact-form"
@@ -118,6 +124,7 @@ const ContactForm = () => {
                 type="submit"
                 disabled={ !formState.isValid }
                 className={ `${formState.isValid ? "valid" : "disabled"} input_submit` }
+                onClick={trackGAEvent}
             >
                 Send
             </button>
