@@ -4,10 +4,12 @@ import Icon from '../icons/Icon';
 
 const SocialLink = props => {
     
-    const trackGAEvent = ReactGA.event({
-        category: 'Link Click',
-        action: `Visited ${props.icon} profile`
-    });
+    const trackGAEvent = () => {
+        ReactGA.event({
+            category: 'Link Click',
+            action: `Visited ${props.icon} profile`
+        });
+    };
 
     return (
         <a 

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactGA from 'react-ga';
 import Header from '../../components/uiElements/Header';
 import CoverPhoto from '../../photos/what-the-help-cover.png';
 import WTHScreens from '../../photos/wth-screens.png';
@@ -10,6 +10,9 @@ import CaseStudySection from '../../components/sections/CaseStudySection';
 
 const WhatTheHelp = () => {   
     
+    // Log pageview in GA
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     return (
         <div>
             <Header 
@@ -21,7 +24,7 @@ const WhatTheHelp = () => {
                     type= 'video'
                     vid={ Video }
 
-                /> 
+                />
                 <CaseStudySection 
                     type='txt'
                     content={

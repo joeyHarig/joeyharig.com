@@ -1,11 +1,14 @@
 import React from 'react';
-
+import ReactGA from 'react-ga';
 import Header from '../../components/uiElements/Header';
 import CoverPhoto from '../../photos/blu360-cover.png';
 import CaseStudySection from '../../components/sections/CaseStudySection';
 
 const Blu360 = () => {   
-    
+
+    // Log pageview in GA
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     return (
         <div>
             <Header 

@@ -9,7 +9,7 @@ const Home = () => {
         <section id="home">
             <div className="home-title_container">
                 <h1>Joey Harig</h1>
-                <h2>designer / developer</h2>
+                <h2>a designer who can code</h2>
             </div>
             <img   
                 className="home-background-logo" 

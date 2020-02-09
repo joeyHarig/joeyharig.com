@@ -47,6 +47,9 @@
             box-shadow: $box-shadow;
             cursor: pointer;
         }
+        &:active {
+            box-shadow: none; 
+        }
     }
     &.disabled {
         &:hover {

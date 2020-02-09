@@ -68,10 +68,12 @@ const ContactForm = () => {
         });
     }, []);
 
-    const trackGAEvent = ReactGA.event({
-        category: 'Form Submission',
-        action: 'Contact Form Submitted'
-    });
+    const trackGAEvent = () => {
+        ReactGA.event({
+            category: 'Form Submission',
+            action: 'Contact Form Submitted'
+        });
+    };
 
     return (
         <form 

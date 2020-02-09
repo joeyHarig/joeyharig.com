@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactGA from 'react-ga';
 import Header from '../../components/uiElements/Header';
 import HorrorFilmFest from '../../photos/horror-film-fest.png';
 import HighNote from '../../photos/colorad-symphony-highnote-series.png';
@@ -18,6 +18,10 @@ import Colorado from '../../photos/colorado.png';
 import CaseStudySection from '../../components/sections/CaseStudySection';
 
 const DesignGallery = () => {   
+    
+    // Log pageview in GA
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    
     return (
         <div>
             <Header 

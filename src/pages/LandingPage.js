@@ -1,12 +1,15 @@
 import React from 'react';
-//import logoFilled from '../components/icons/logoFilled.svg';
-//import './LandingPage.scss';
+import ReactGA from 'react-ga';
 import Home from '../components/sections/Home';
 import Projects from '../components/sections/Projects';
 import AboutMe from '../components/sections/AboutMe';
 import ContactMe from '../components/sections/ContactMe';
 
 const LandingPage = props => {
+    
+    // Log pageview in GA
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     return (
         <div>
             <Home />

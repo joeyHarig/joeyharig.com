@@ -9,10 +9,12 @@ const Button = props => {
 
     const {type, link } = props;
 
-    const trackGAEvent = ReactGA.event({
-        category: 'Button Click',
-        action: `Visited ${link}`
-    });
+    const trackGAEvent = () => {
+        ReactGA.event({
+            category: 'Button Click',
+            action: `Visited ${link}`
+        });
+    };
 
     let button;
     switch (type) {
